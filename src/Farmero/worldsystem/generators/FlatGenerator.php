@@ -42,6 +42,6 @@ class FlatGenerator extends Generator {
     }
 
     public function getName(): string {
-        return "flat";
+        return "farmero_flat";
     }
 }

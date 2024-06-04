@@ -9,8 +9,6 @@ use pocketmine\world\ChunkManager;
 use pocketmine\world\SimpleChunkManager;
 use pocketmine\world\format\Chunk;
 use pocketmine\world\biome\Biome;
-use pocketmine\world\generator\object\OreType;
-use pocketmine\block\VanillaBlocks;
 use pocketmine\math\Vector3;
 
 class VoidGenerator extends Generator {

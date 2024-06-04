@@ -23,11 +23,11 @@ class FlatGenerator extends Generator {
                 $chunk->setBiomeId($x, $z, Biome::PLAINS);
                 for ($y = 0; $y < 64; ++$y) {
                     if ($y == 0) {
-                        $chunk->setBlockStateId($x, $y, $z, VanillaBlocks::BEDROCK()->getFullId());
+                        $chunk->setBlockStateId($x, $y, $z, VanillaBlocks::BEDROCK()->getStateId());
                     } elseif ($y < 4) {
-                        $chunk->setBlockStateId($x, $y, $z, VanillaBlocks::DIRT()->getFullId());
+                        $chunk->setBlockStateId($x, $y, $z, VanillaBlocks::DIRT()->getStateId());
                     } else {
-                        $chunk->setBlockStateId($x, $y, $z, VanillaBlocks::GRASS()->getFullId());
+                        $chunk->setBlockStateId($x, $y, $z, VanillaBlocks::GRASS()->getStateId());
                     }
                 }
             }

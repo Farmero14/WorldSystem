@@ -7,7 +7,7 @@ namespace Farmero\worldsystem\generators;
 use pocketmine\world\generator\Generator;
 use pocketmine\world\ChunkManager;
 use pocketmine\world\format\Chunk;
-use pocketmine\world\biome\Biome;
+use pocketmine\data\bedrock\BiomeIds;
 use pocketmine\block\VanillaBlocks;
 use pocketmine\math\Vector3;
 
@@ -20,7 +20,7 @@ class FlatGenerator extends Generator {
         $chunk = $world->getChunk($chunkX, $chunkZ);
         for ($x = 0; $x < 16; ++$x) {
             for ($z = 0; $z < 16; ++$z) {
-                $chunk->setBiomeId($x, $z, Biome::PLAINS);
+                $chunk->setBiomeId($x, $z, BiomeIds::PLAINS);
                 for ($y = 0; $y < 64; ++$y) {
                     if ($y == 0) {
                         $chunk->setBlockStateId($x, $y, $z, VanillaBlocks::BEDROCK()->getStateId());

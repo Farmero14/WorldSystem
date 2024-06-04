@@ -20,8 +20,8 @@ class WorldSystem extends PluginBase {
     }
 
     private function registerGenerators(): void {
-        GeneratorManager::addGenerator(VoidGenerator::class, "void");
-        GeneratorManager::addGenerator(FlatGenerator::class, "flat");
-        GeneratorManager::addGenerator(PMGenerator::class, "normal");
+        GeneratorManager::addGenerator("void", VoidGenerator::class);
+        GeneratorManager::addGenerator("flat", FlatGenerator::class);
+        GeneratorManager::addGenerator("normal", PMGenerator::class);
     }
 }

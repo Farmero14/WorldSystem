@@ -8,6 +8,7 @@ use pocketmine\world\generator\Generator;
 use pocketmine\world\ChunkManager;
 use pocketmine\world\format\Chunk;
 use pocketmine\world\biome\Biome;
+use pocketmine\block\VanillaBlocks;
 use pocketmine\math\Vector3;
 
 class FlatGenerator extends Generator {
@@ -22,11 +23,11 @@ class FlatGenerator extends Generator {
                 $chunk->setBiomeId($x, $z, Biome::PLAINS);
                 for ($y = 0; $y < 64; ++$y) {
                     if ($y == 0) {
-                        $chunk->setFullBlock($x, $y, $z, VanillaBlocks::BEDROCK()->getFullId());
+                        $chunk->setBlockStateId($x, $y, $z, VanillaBlocks::BEDROCK()->getFullId());
                     } elseif ($y < 4) {
-                        $chunk->setFullBlock($x, $y, $z, VanillaBlocks::DIRT()->getFullId());
+                        $chunk->setBlockStateId($x, $y, $z, VanillaBlocks::DIRT()->getFullId());
                     } else {
-                        $chunk->setFullBlock($x, $y, $z, VanillaBlocks::GRASS()->getFullId());
+                        $chunk->setBlockStateId($x, $y, $z, VanillaBlocks::GRASS()->getFullId());
                     }
                 }
             }

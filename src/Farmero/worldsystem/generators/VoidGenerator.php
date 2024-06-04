@@ -13,7 +13,7 @@ use pocketmine\math\Vector3;
 
 class VoidGenerator extends Generator {
 
-    public function __construct(int $seed, string $preset) {
+    public function __construct() {
     }
 
     public function generateChunk(ChunkManager $world, int $chunkX, int $chunkZ): void {

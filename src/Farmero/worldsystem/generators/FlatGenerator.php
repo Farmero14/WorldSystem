@@ -20,7 +20,6 @@ class FlatGenerator extends Generator {
         $chunk = $world->getChunk($chunkX, $chunkZ);
         for ($x = 0; $x < 16; ++$x) {
             for ($z = 0; $z < 16; ++$z) {
-                $chunk->setBiomeId($x, $z, BiomeIds::PLAINS);
                 for ($y = 0; $y < 64; ++$y) {
                     if ($y == 0) {
                         $chunk->setBlockStateId($x, $y, $z, VanillaBlocks::BEDROCK()->getStateId());
@@ -30,6 +29,7 @@ class FlatGenerator extends Generator {
                         $chunk->setBlockStateId($x, $y, $z, VanillaBlocks::GRASS()->getStateId());
                     }
                 }
+                $chunk->setBiomeId($x, $z, 320, BiomeIds::PLAINS); // Set the biome at height 320
             }
         }
     }

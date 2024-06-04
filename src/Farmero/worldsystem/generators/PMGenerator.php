@@ -14,6 +14,6 @@ class PMGenerator extends Normal {
     }
 
     public function getName(): string {
-        return "normal";
+        return "farmero_normal";
     }
 }
